@@ -1,0 +1,8 @@
+.custom-button {
+  width: 15rem;
+  height: 3rem;
+}
+
+.selected {
+  background-color: deepskyblue;
+}

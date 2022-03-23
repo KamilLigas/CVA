@@ -1,0 +1,23 @@
+<mat-card class="container">
+  <mat-accordion class="w-100">
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title class="justify-content-center">
+          Wybór Produktów
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <form [formGroup]="form">
+        <div class="d-flex flex-wrap justify-content-center">
+          <ng-container *ngFor="let product of productsList">
+              <app-product-button
+                formControlName="product"
+                ngDefaultControl
+                class="p-2"
+                [product]="product"
+              ></app-product-button>
+          </ng-container>
+        </div>
+      </form>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-card>
